@@ -8,7 +8,7 @@ RUN pip install \
     flask_cors \
     gunicorn
 CMD rm -rf /etc/systemd/system/backend.service
-ADD /backend.service /etc/systemd/system/backend.service
+ADD /back/backend.service /etc/systemd/system/backend.service
 CMD gunicorn --bind 0.0.0.0:8000 wsgi:app
 CMD systemctl daemon-reload
 CMD systemctl restart backend
