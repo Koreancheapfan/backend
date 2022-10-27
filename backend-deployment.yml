@@ -16,7 +16,6 @@ spec:
     containers:
     - name: backend
       image: dasadanan/test:backlatest
-
       envFrom:
       ports:
       - containerPort: 8000
@@ -25,3 +24,4 @@ spec:
           cpu: 100m
         limits:
           cpu: 200m
+      command: ["/bin/sh", "-ec", "while :; do echo '.'; sleep 5 ; done"]
