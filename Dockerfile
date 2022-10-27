@@ -7,10 +7,9 @@ RUN pip install \
     flask \
     flask_cors \
     gunicorn
-ADD *.py /apps/
+ADD *.py /
 CMD rm -rf /etc/systemd/system/backend.service
 ADD backend.service /etc/systemd/system/backend.service
-CMD cat /root/back/wsgi.py
-CMD gunicorn --bind 0.0.0.0:8000 /root/back/wsgi.py:app
+CMD gunicorn --bind 0.0.0.0:8000 wsgi:app
 
   
