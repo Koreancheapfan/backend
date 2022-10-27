@@ -14,8 +14,8 @@ spec:
    spec:
     containers:
     - name: backend
-      image: dasadanan/test:backlatest
-:latest
+      image: dasadanan/test:backlatest .
+
       envFrom:
       ports:
       - containerPort: 8000
