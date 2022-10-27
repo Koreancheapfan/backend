@@ -10,4 +10,3 @@ RUN pip install \
 CMD gunicorn --bind 0.0.0.0:8000 wsgi:app
 CMD systemctl daemon-reload
 CMD systemctl restart backend
-CMD python main.py
