@@ -24,4 +24,3 @@ spec:
           cpu: 100m
         limits:
           cpu: 200m
-      command: ["/bin/sh", "-ec", "while :; do echo '.'; sleep 5 ; done"]
