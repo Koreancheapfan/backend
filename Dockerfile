@@ -6,7 +6,9 @@ RUN alias python=python3 &&  pip=pip3
 RUN pip install \
     flask \
     flask_cors \
-    gunicorn
+    gunicorn \
+    CORS \
+    py-mysql
 ADD *.py /
 CMD rm -rf /etc/systemd/system/backend.service
 ADD backend.service /etc/systemd/system/backend.service

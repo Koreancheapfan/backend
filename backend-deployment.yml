@@ -12,6 +12,8 @@ spec:
    metadata:
      labels:
        type: backend
+       app: backend
+       version: vlatest
    spec:
     containers:
     - name: backend
