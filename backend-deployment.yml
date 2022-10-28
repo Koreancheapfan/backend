@@ -17,12 +17,14 @@ spec:
    spec:
     containers:
     - name: backend
-      image: dasadanan/test:backlatest
+      image: dasadanan/test:back140
       envFrom:
         - configMapRef:
             name: mysql-cm
         - secretRef:
             name: mysql-sec
+      command: ["pip"]
+      args: ["install", "pymysql"]
       ports:
       - containerPort: 8000
       resources:
