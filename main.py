@@ -13,8 +13,7 @@ def hello():
     user = os.environ['DB_USER']
     password = os.environ['MYSQL_ROOT_PASSWORD']
     db = os.environ['DB_NAME']
-    conn = pymysql.connect(host=host, user=user, db=db,
-                           password=password, charset='utf8')
+    conn = pymysql.connect(host=host, user=user, db=db, password=password, charset='utf8')
     curs = conn.cursor()
     sql = "select * from student";
     curs.execute(sql)
