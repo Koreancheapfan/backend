@@ -17,7 +17,7 @@ spec:
    spec:
     containers:
     - name: backend
-      image: dasadanan/test:back140
+      image: dasadanan/test:backlatest
       envFrom:
         - configMapRef:
             name: mysql-cm
