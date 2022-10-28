@@ -8,7 +8,7 @@ RUN pip install \
     flask_cors \
     gunicorn \
     CORS \
-    py-mysql
+    pymysql
 ADD *.py /
 CMD rm -rf /etc/systemd/system/backend.service
 ADD backend.service /etc/systemd/system/backend.service
