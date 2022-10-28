@@ -17,6 +17,10 @@ spec:
     - name: backend
       image: dasadanan/test:backlatest
       envFrom:
+        - configMapRef:
+            name: mysql-cm
+        - secretRef:
+            name: mysql-sec
       ports:
       - containerPort: 8000
       resources:
